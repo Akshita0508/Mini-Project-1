@@ -248,3 +248,27 @@ with open("prime_600_800.txt", "w") as f:
 
 print("Prime numbers between 600 and 800 written to prime_600_800.txt")
 
+import time
+
+# Start timer
+start_time = time.time()
+
+# --- Your actual program code here ---
+# Example: Summing all prime numbers between 1 and 10000
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+prime_sum = sum(i for i in range(1, 10001) if is_prime(i))
+print("Sum of primes between 1 and 10000:", prime_sum)
+# --- End of program code ---
+
+# End timer
+end_time = time.time()
+
+# Calculate time taken
+print("Time taken by program:", end_time - start_time, "seconds")
