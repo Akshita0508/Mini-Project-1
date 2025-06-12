@@ -306,3 +306,30 @@ plt.xlabel("Number of Elements in List")
 plt.ylabel("Time Taken (seconds)")
 plt.grid(True)
 plt.show()
+
+# Dictionary with student names and their marks in 5 subjects
+students = {
+    "Alice": [78, 85, 92, 88, 76],
+    "Bob": [65, 70, 68, 72, 60],
+    "Charlie": [90, 95, 85, 80, 88],
+    "David": [55, 60, 58, 62, 59],
+    "Eva": [82, 79, 85, 80, 81]
+}
+
+# Calculate average marks for each student
+averages = {}
+for name, marks in students.items():
+    avg = sum(marks) / len(marks)
+    averages[name] = avg
+
+# Find max and min average
+max_student = max(averages, key=averages.get)
+min_student = min(averages, key=averages.get)
+
+# Display results
+print("Average Marks of Each Student:")
+for name, avg in averages.items():
+    print(f"{name}: {avg:.2f}")
+
+print(f"\n✅ Student with Maximum Average: {max_student} ({averages[max_student]:.2f})")
+print(f"✅ Student with Minimum Average: {min_student} ({averages[min_student]:.2f})")
