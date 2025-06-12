@@ -92,3 +92,29 @@ print("After updating key 3 to 7.1:", D)
 # (vii) Clear the dictionary
 D.clear()
 print("After clearing D:", D)
+
+# Initial sets
+S1 = set([10, 20, 30, 40, 50, 60])
+S2 = set([40, 50, 60, 70, 80, 90])
+
+# (i) Add 55 and 66 in Set S1
+S1.add(55)
+S1.add(66)
+print("S1 after adding 55 and 66:", S1)
+
+# (ii) Remove 10 and 30 from Set S1
+S1.discard(10)
+S1.discard(30)
+print("S1 after removing 10 and 30:", S1)
+
+# (iii) Check whether 40 is present in S1
+print("Is 40 in S1?", 40 in S1)
+
+# (iv) Union of S1 and S2
+print("Union:", S1.union(S2))
+
+# (v) Intersection of S1 and S2
+print("Intersection:", S1.intersection(S2))
+
+# (vi) S1 - S2
+print("S1 - S2:", S1.difference(S2))
