@@ -253,7 +253,7 @@ import time
 # Start timer
 start_time = time.time()
 
-# --- Your actual program code here ---
+
 # Example: Summing all prime numbers between 1 and 10000
 def is_prime(n):
     if n < 2:
@@ -265,10 +265,44 @@ def is_prime(n):
 
 prime_sum = sum(i for i in range(1, 10001) if is_prime(i))
 print("Sum of primes between 1 and 10000:", prime_sum)
-# --- End of program code ---
+
 
 # End timer
 end_time = time.time()
 
 # Calculate time taken
 print("Time taken by program:", end_time - start_time, "seconds")
+
+import random
+import time
+import matplotlib.pyplot as plt
+
+# Define list sizes in thousands
+sizes = [5000, 10000, 15000, 20000, 25000]
+times = []
+
+print(f"{'Number of Elements':<25}{'Time Taken (seconds)'}")
+print("-" * 45)
+
+for size in sizes:
+    # Generate random list
+    data = [random.randint(1, 100000) for _ in range(size)]
+
+    # Time the sorting
+    start = time.time()
+    data.sort()  # You can also use sorted(data)
+    end = time.time()
+
+    time_taken = end - start
+    times.append(time_taken)
+
+    # Print table row
+    print(f"{size:<25}{time_taken:.6f}")
+
+# Plotting the graph
+plt.plot(sizes, times, marker='o', color='blue')
+plt.title("List Size vs Time Taken to Sort")
+plt.xlabel("Number of Elements in List")
+plt.ylabel("Time Taken (seconds)")
+plt.grid(True)
+plt.show()
