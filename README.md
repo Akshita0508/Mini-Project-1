@@ -60,3 +60,35 @@ print("After clearing L:", L)
 # (xii) Delete L
 del L
 # print(L)  # This will give an error if you uncomment, since L no longer exists
+
+# Initial dictionary
+D = {1: 5.6, 2: 7.8, 3: 6.6, 4: 8.7, 5: 7.7}
+
+# (i) Add new entry: key=8 and value=8.8
+D[8] = 8.8
+print("After adding key 8:", D)
+
+# (ii) Remove key=2
+D.pop(2)
+print("After removing key 2:", D)
+
+# (iii) Check whether key=6 is present in D
+if 6 in D:
+    print("Key 6 is present in D")
+else:
+    print("Key 6 is not present in D")
+
+# (iv) Count the number of elements present in D
+print("Number of elements in D:", len(D))
+
+# (v) Add all the values present in D
+value_sum = sum(D.values())
+print("Sum of all values:", value_sum)
+
+# (vi) Update the value of key=3 to 7.1
+D[3] = 7.1
+print("After updating key 3 to 7.1:", D)
+
+# (vii) Clear the dictionary
+D.clear()
+print("After clearing D:", D)
