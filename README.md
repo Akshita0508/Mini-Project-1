@@ -232,3 +232,19 @@ with open("random_strings.txt", "w") as f:
         f.write(rand_str + "\n")
 
 print("100 random strings written to random_strings.txt")
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+with open("prime_600_800.txt", "w") as f:
+    for num in range(600, 801):
+        if is_prime(num):
+            f.write(str(num) + "\n")
+
+print("Prime numbers between 600 and 800 written to prime_600_800.txt")
+
