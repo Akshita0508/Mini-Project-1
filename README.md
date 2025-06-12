@@ -210,3 +210,13 @@ with open("dictionary_output.txt", "w") as f:
         f.write(f"{key}, {value}\n")
 
 print("Dictionary written to dictionary_output.txt")
+
+# List
+L = ["One", "Two", "Three", "Four", "Five"]
+
+# Write to file
+with open("list_lengths.txt", "w") as f:
+    for word in L:
+        f.write(f"{word}, {len(word)}\n")
+
+print("List with lengths written to list_lengths.txt")
