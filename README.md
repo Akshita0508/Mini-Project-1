@@ -118,3 +118,30 @@ print("Intersection:", S1.intersection(S2))
 
 # (vi) S1 - S2
 print("S1 - S2:", S1.difference(S2))
+
+import random
+import string
+
+# (i) 100 random strings of length 6 to 8
+print("Random Strings:")
+for _ in range(100):
+    length = random.randint(6, 8)
+    random_str = ''.join(random.choices(string.ascii_letters, k=length))
+    print(random_str)
+
+# (ii) Prime numbers between 600 and 800
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+primes = [x for x in range(600, 801) if is_prime(x)]
+print("Prime numbers between 600 and 800:", primes)
+
+# (iii) Numbers between 100 and 1000 divisible by 7 and 9
+divisible = [x for x in range(100, 1001) if x % 7 == 0 and x % 9 == 0]
+print("Numbers divisible by 7 and 9:", divisible)
+
