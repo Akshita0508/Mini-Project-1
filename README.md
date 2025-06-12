@@ -220,3 +220,15 @@ with open("list_lengths.txt", "w") as f:
         f.write(f"{word}, {len(word)}\n")
 
 print("List with lengths written to list_lengths.txt")
+
+import random
+import string
+
+# Generate and write random strings to file
+with open("random_strings.txt", "w") as f:
+    for _ in range(100):
+        length = random.randint(10, 15)
+        rand_str = ''.join(random.choices(string.ascii_letters, k=length))
+        f.write(rand_str + "\n")
+
+print("100 random strings written to random_strings.txt")
