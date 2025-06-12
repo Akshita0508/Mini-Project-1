@@ -200,3 +200,13 @@ def is_prime(n):
 prime_numbers = [x for x in L if is_prime(x)]
 print("Prime Numbers:", prime_numbers)
 print("Count of Prime Numbers:", len(prime_numbers))
+
+# Dictionary
+D = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five"}
+
+# Write to file
+with open("dictionary_output.txt", "w") as f:
+    for key, value in D.items():
+        f.write(f"{key}, {value}\n")
+
+print("Dictionary written to dictionary_output.txt")
