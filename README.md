@@ -145,3 +145,58 @@ print("Prime numbers between 600 and 800:", primes)
 divisible = [x for x in range(100, 1001) if x % 7 == 0 and x % 9 == 0]
 print("Numbers divisible by 7 and 9:", divisible)
 
+# (i) Two random lists
+list1 = [random.randint(10, 30) for _ in range(10)]
+list2 = [random.randint(10, 30) for _ in range(10)]
+
+print("List 1:", list1)
+print("List 2:", list2)
+
+# (i) Common numbers
+common = list(set(list1) & set(list2))
+print("Common numbers:", common)
+
+# (ii) Unique numbers in both lists
+unique = list(set(list1) ^ set(list2))
+print("Unique numbers:", unique)
+
+# (iii) Minimum in both lists
+print("Min in List 1:", min(list1))
+print("Min in List 2:", min(list2))
+
+# (iv) Maximum in both lists
+print("Max in List 1:", max(list1))
+print("Max in List 2:", max(list2))
+
+# (v) Sum of both lists
+print("Sum of List 1:", sum(list1))
+print("Sum of List 2:", sum(list2))
+
+import random
+
+# Generate list
+L = [random.randint(100, 900) for _ in range(100)]
+print("Random List:", L)
+
+# (i) All odd numbers
+odd_numbers = [x for x in L if x % 2 != 0]
+print("Odd Numbers:", odd_numbers)
+print("Count of Odd Numbers:", len(odd_numbers))
+
+# (ii) All even numbers
+even_numbers = [x for x in L if x % 2 == 0]
+print("Even Numbers:", even_numbers)
+print("Count of Even Numbers:", len(even_numbers))
+
+# (iii) All prime numbers
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+prime_numbers = [x for x in L if is_prime(x)]
+print("Prime Numbers:", prime_numbers)
+print("Count of Prime Numbers:", len(prime_numbers))
